@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .header {
+            display: flex;
+            background-color: rgb(0, 0, 0);
+            padding: 4px 10px;
+        }
+        
+        .header nav {
+            text-align: right;
+            width: 100%;
+            font-size: 0px;
+            padding-right: 10px;
+        }
+        
+        .header nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            line-height: 86px;
+            padding: 0px 10px;
+            font-size: 16px;
+            transition: transform 0.5s, color 0.5s;
+        }
+        
+        .header nav a:hover {
+            transform: scale(1.2);
+            color: rgb(255, 254, 172);
+        }
+        
+        .header .logo {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        
+        .banner img {
+            width: 100%;
+        }
+        
+        .path {
+            display: flex;
+        }
+        
+        .path li {
+            padding: 6px 8px;
+            position: relative;
+        }
+        
+        .path li a {
+            color: rgb(184, 184, 184);
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .path li+li::before {
+            content: '/';
+            color: rgb(184, 184, 184);
+            position: absolute;
+            left: 0;
+        }
+        
+        .about {
+            margin: 10px;
+            padding-bottom: 35px;
+        }
+        
+        .about .wrap {
+            display: flex;
+            width: 960px;
+            margin: auto;
+        }
+        
+        .about .wrap .item {
+            width: 300px;
+            margin: 0px 10px;
+        }
+        
+        .item img {
+            width: 100%;
+        }
+        
+        .item h3 {
+            font-size: 25px;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .about>h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .about>p {
+            text-align: center;
+            padding: 15px 150px;
+        }
+        
+        .products {
+            background-color: rgb(214, 214, 214);
+        }
+        
+        .products .wrap {
+            width: 960px;
+            display: flex;
+            margin: auto;
+        }
+        
+        .products .item {
+            width: 50%;
+            padding: 0px 50px;
+        }
+        
+        .products .item img {
+            width: 100%;
+            padding: 30px 0px;
+        }
+        
+        .products .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 1.5;
+            font-size: 18px;
+        }
+        
+        .service {
+            width: 100%;
+            padding: 30px 0;
+        }
+        
+        .service .wrap {
+            width: 960px;
+            display: flex;
+            margin: auto;
+        }
+        
+        .service .item {
+            width: 300px;
+            margin: 10px;
+        }
+        
+        .service>h2 {
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .service>p {
+            text-align: center;
+            padding: 15px 150px;
+        }
+        
+        .footer {
+            background-color: black;
+            color: rgba(255, 255, 255, 0.61);
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="logo"><img src="Globe-logo-award.png" height="65px" alt="logo"></a>
+        <nav>
+            <a href="#">最新消息</a>
+            <a href="#">產品資訊</a>
+            <a href="#">服務內容</a>
+            <a href="#">關於我們</a>
+            <a href="#">聯絡我們</a>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="bigdata.jpg" alt="banner">
+    </div>
+
+    <ul class="path">
+        <li><a href="#">首頁</a></li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">產品資訊</a></li>
+    </ul>
+
+    <div class="about">
+        <h2>關於我們</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus officia atque consequuntur non dolores quos excepturi autem accusantium. Quidem, eos pariatur tempore cupiditate numquam in? Est mollitia, doloribus incidunt nulla laboriosam animi
+            temporibus dolorum! Cupiditate hic facere, modi eos necessitatibus vero dicta est voluptatem eum ducimus esse porro sed aliquid?</p>
+        <div class="wrap">
+            <div class="item">
+                <img src="tree.jpg" alt="品牌資訊">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum laudantium rerum quod labore autem repudiandae, dolores sunt assumenda magnam in aspernatur doloribus illum, tempore quaerat, minus nesciunt sint optio vitae?</p>
+            </div>
+            <div class="item">
+                <img src="tree.jpg" alt="品牌資訊">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum laudantium rerum quod labore autem repudiandae, dolores sunt assumenda magnam in aspernatur doloribus illum, tempore quaerat, minus nesciunt sint optio vitae?</p>
+            </div>
+            <div class="item">
+                <img src="tree.jpg" alt="品牌資訊">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum laudantium rerum quod labore autem repudiandae, dolores sunt assumenda magnam in aspernatur doloribus illum, tempore quaerat, minus nesciunt sint optio vitae?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="wrap">
+            <div class="item pic">
+                <img src="pad.jpg" alt="平板電腦">
+            </div>
+
+            <div class="item text">
+                <h3>title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus nemo illum sed similique quod, expedita animi eaque amet est, laboriosam eveniet? Cupiditate corrupti amet error reprehenderit, nulla rem nostrum distinctio nihil
+                    voluptatibus veritatis sit, aut ratione illo deserunt tempora?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <h2>服務內容</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sequi neque accusamus totam dolorem laborum quasi nobis autem dolorum. Suscipit nostrum veritatis voluptatem natus iure qui at molestiae voluptates id?</p>
+        <div class="wrap">
+            <div class="item">
+                <img src="service.jpg" alt="服務內容">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat impedit fugit libero blanditiis. Adipisci ad labore recusandae porro vero repellendus delectus quo explicabo vel repudiandae impedit, tenetur officiis molestiae quisquam!</p>
+            </div>
+            <div class="item">
+                <img src="service.jpg" alt="服務內容">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat impedit fugit libero blanditiis. Adipisci ad labore recusandae porro vero repellendus delectus quo explicabo vel repudiandae impedit, tenetur officiis molestiae quisquam!</p>
+            </div>
+            <div class="item">
+                <img src="service.jpg" alt="服務內容">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat impedit fugit libero blanditiis. Adipisci ad labore recusandae porro vero repellendus delectus quo explicabo vel repudiandae impedit, tenetur officiis molestiae quisquam!</p>
+            </div>
+            <div class="item">
+                <img src="service.jpg" alt="服務內容">
+                <h3>title</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat impedit fugit libero blanditiis. Adipisci ad labore recusandae porro vero repellendus delectus quo explicabo vel repudiandae impedit, tenetur officiis molestiae quisquam!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; copyright 2022 by Bill
+    </div>
+
+</body>
+
+</html>
