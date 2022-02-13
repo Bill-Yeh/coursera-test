@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站麵包屑</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+        
+        .breadwrap {
+            padding: 10px 0;
+            background-color: rgb(255, 193, 117);
+        }
+        
+        .breadcrump {
+            width: 90%;
+            display: flex;
+            margin: auto;
+        }
+        
+        .breadcrump li {
+            padding: 0 20px;
+        }
+        
+        .breadcrump li+li::before {
+            content: '>';
+            color: azure;
+            margin-right: 20px;
+        }
+        
+        .breadcrump li+li {
+            padding-left: 0;
+        }
+        
+        .breadcrump li a {
+            text-decoration: none;
+            color: azure;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        .breadcrump li a:hover,
+        .breadcrump li:last-child a {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 網站麵包屑 -->
+
+    <div class="breadwrap">
+        <ol class="breadcrump">
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">新品上市</a></li>
+            <li><a href="#">男裝</a></li>
+            <li><a href="#">休閒套裝</a></li>
+            <li><a href="#">長褲</a></li>
+        </ol>
+    </div>
+
+
+
+
+</body>
+
+</html>

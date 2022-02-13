@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導覽列</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <style>
+        .main-header {
+            background-color: darkblue;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .main-header .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            /* margin: auto; */
+        }
+        
+        .main-header .logo {
+            width: 100px;
+        }
+        
+        .main-header .logo img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        
+        .main-header .main-nav {
+            display: flex;
+            margin: auto;
+        }
+        
+        .main-header .main-nav a {
+            padding: 5px 20px;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            transform: translateY(0px);
+            transition: .3s;
+        }
+        
+        .main-header .main-nav a:hover {
+            transform: translateY(-3px);
+        }
+        
+        .main-header .main-nav a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -5%;
+            height: 0;
+            border-bottom: 1px solid white;
+            transition: .3s;
+        }
+        
+        .main-header .main-nav a:hover::after {
+            left: 0;
+            right: 0;
+        }
+        
+        .main-header .header-search {
+            /* 緊密排列 */
+            display: flex;
+        }
+        
+        .main-header .header-search input[type="search"],
+        .main-header .header-search input[type="image"] {
+            border: none;
+            background-color: white;
+            padding: 5px 10px;
+        }
+        
+        .main-header .header-search input[type="search"]:focus,
+        .main-header .header-search input[type="image"]:focus {
+            outline: none;
+        }
+        
+        .main-header .header-search input[type="search"] {
+            border-radius: 500px 0 0 500px;
+        }
+        
+        .main-header .header-search input[type="image"] {
+            border-radius: 0 500px 500px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="image/Globe-logo-award.png" alt="logo">
+            </a>
+            <nav class="main-nav">
+                <a href="#">最新消息</a>
+                <a href="#">新品上市</a>
+                <a href="#">聯名款式</a>
+                <a href="#">促銷專區</a>
+                <a href="#">關於我們</a>
+            </nav>
+            <form class="header-search">
+                <input type="search">
+                <input type="image" src="image/magnifying-glass.png" width="20px" alt="搜尋">
+            </form>
+        </div>
+    </header>
+
+
+
+
+</body>
+
+</html>

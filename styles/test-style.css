@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* 開頭h1 */
+
+h1 {
+    color: rgb(87, 87, 87);
+    margin: 10px 0px 0px 10px;
+    line-height: 1.5;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.p {
+    margin-left: 10px;
+}
+
+
+/* 導覽列 */
+
+body {
+    padding-top: 60px;
+}
+
+nav {
+    background-color: #0a0a0a;
+    height: 50px;
+    text-align: center;
+    font-size: 0px;
+    padding: 10px 0px;
+    opacity: 0.7;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 5px 30px;
+}
+
+nav a:hover {
+    background-color: grey;
+}
+
+
+/* 傳統計算區塊空間 */
+
+.box {
+    width: 960px;
+    background-color: rgb(163, 163, 163);
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.colume {
+    width: 280px;
+    background-color: white;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* 使用box-sizing */
+
+.wrap {
+    width: 960px;
+    background-color: rgb(252, 210, 134);
+    margin: auto;
+    margin-top: 50px;
+}
+
+.item {
+    width: 300px;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid cornflowerblue;
+}
+
+.clear-fix {
+    clear: both;
+    width: 100%;
+}

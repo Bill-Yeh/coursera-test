@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣旅遊寶典|熱門美食景點大集image/合</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        /* banner切版 */
+        
+        .banner {
+            width: 100%;
+            height: 700px;
+            background: linear-gradient(115deg, #7bf 50%, transparent 50%) center center/100% 100%, url("image/taiwan.jpg") right center/cover
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            height: 100%;
+            margin: auto;
+        }
+        
+        .banner-text {
+            height: 100%;
+            display: flex;
+            /* 主軸改成垂直 */
+            flex-direction: column;
+            /* 主軸置中 */
+            justify-content: center;
+            /* 次軸靠左 */
+            align-items: flex-start;
+            line-height: 1.2;
+        }
+        
+        .banner-text h1 {
+            font-size: 60px;
+            border-bottom: 1px solid rgb(94, 93, 93);
+        }
+        
+        .banner-text h1 small {
+            display: block;
+            font-size: 50px
+        }
+        
+        .banner-text h2 {
+            font-size: 40px;
+        }
+        
+        .banner-text p {
+            font-size: 30px;
+        }
+        /* 互動圖文卡片 */
+        
+        @media screen and (min-width:768px) {
+            .wrap {
+                width: 1200px;
+                display: flex;
+                margin: auto;
+                margin-top: 80px;
+            }
+            .item {
+                width: 25%;
+                position: relative;
+            }
+            .item:hover .item-text {
+                opacity: 1;
+            }
+            .item img {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .item .item-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.61);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.5s;
+            }
+            .item .item-text h2 {
+                font-size: 35px;
+                color: yellow;
+                font-weight: 500;
+                text-align: center;
+            }
+            .item .item-text h2::after {
+                content: "";
+                display: block;
+                width: 0%;
+                height: 2px;
+                margin: 10px 0px;
+                background-color: yellow;
+                transition: 0.5s 0.2s;
+            }
+            .item:hover .item-text h2::after {
+                width: 100%;
+            }
+            .item .item-text p {
+                font-size: 18px;
+                color: white;
+                font-weight: 100;
+                text-align: center;
+                line-height: 1.2;
+            }
+            /* 人員或特色介紹卡片 */
+            .feature {
+                width: 1200px;
+                display: flex;
+                margin: auto;
+                margin-top: 80px;
+            }
+            .feature .info {
+                width: 368px;
+                margin: 15px;
+                background-color: white;
+                border: 1px solid rgb(165, 165, 165);
+            }
+            .feature img {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .info {
+                transform: translateY(0px);
+                transition: .5s;
+            }
+            .info-text {
+                position: relative;
+                padding: 20px;
+            }
+            .info-text::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                left: 0;
+                top: 1%;
+                border-left: 184px solid white;
+                border-right: 184px solid white;
+                transform: translateY(-100%);
+            }
+            .info:hover .info-text::before {
+                border-left: 184px solid rgb(255, 159, 16);
+                border-right: 184px solid rgb(255, 159, 16);
+            }
+            .info:hover {
+                transform: translateY(-50px);
+            }
+            .info:hover .info-text {
+                background: linear-gradient(0deg, rgb(247, 223, 9), rgb(255, 159, 16));
+            }
+            .info h2 {
+                border-bottom: 1px solid grey;
+                padding-bottom: .3em;
+                margin-bottom: .4em;
+                text-align: center;
+                font-size: 28px;
+                font-weight: 700;
+            }
+            .info p {
+                line-height: 1.6;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            .banner {
+                width: 100%;
+                height: 400px;
+                background-image: url(taiwan.jpg);
+            }
+            .banner-text {
+                height: 100%;
+                display: flex;
+                /* 主軸改成垂直 */
+                flex-direction: column;
+                /* 主軸置中 */
+                justify-content: center;
+                /* 次軸靠左 */
+                align-items: center;
+                line-height: 1.2;
+                background-color: rgba(84, 85, 85, 0.452);
+                color: yellow;
+                text-align: center;
+            }
+            .banner-text h1 {
+                font-size: 40px;
+                border-bottom: 1px solid rgb(211, 208, 208);
+            }
+            .banner-text h1 small {
+                display: block;
+                font-size: 30px
+            }
+            .banner-text h2 {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            .banner-text p {
+                display: none;
+            }
+            .wrap {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .item .item-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.61);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .item {
+                width: 100%;
+                position: relative;
+                margin-bottom: 10px;
+            }
+            .item img {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .item .item-text h2 {
+                font-size: 35px;
+                color: yellow;
+                font-weight: 500;
+                text-align: center;
+            }
+            .item .item-text p {
+                font-size: 18px;
+                color: white;
+                font-weight: 100;
+                text-align: center;
+                padding: 10px 20px;
+            }
+            /* 人員或特色介紹卡片 */
+            .feature {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .feature img {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .feature .info {
+                width: 100%;
+                margin: 15px;
+                background-color: white;
+                border: 1px solid rgb(165, 165, 165);
+            }
+            .info {
+                transform: translateY(0px);
+                transition: .5s;
+            }
+            .info-text {
+                position: relative;
+                padding: 20px;
+            }
+            .info:hover .info-text::before {
+                border-left: 184px solid rgb(255, 159, 16);
+                border-right: 184px solid rgb(255, 159, 16);
+            }
+            .info:hover {
+                transform: translateY(-50px);
+            }
+            .info:hover .info-text {
+                background: linear-gradient(0deg, rgb(247, 223, 9), rgb(255, 159, 16));
+            }
+            .info h2 {
+                border-bottom: 1px solid grey;
+                padding-bottom: .3em;
+                margin-bottom: .4em;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 700;
+            }
+            .info p {
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- banner切版 -->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-text">
+                <h1>台灣旅遊寶典
+                    <small>
+                        熱門美食景點大集合
+                    </small>
+                </h1>
+                <h2>食衣住行吃喝玩樂懶人包</h2>
+                <p>如果您是台灣人,您可以深入認識這座美麗國家
+                    <br> 如果您是外國旅客,您可以快速玩遍台灣
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 互動圖文卡片 -->
+    <div class="wrap">
+        <div class="item">
+            <img src="image/night-market.jpg" width="500px" alt="夜市">
+            <div class="item-text">
+                <h2>觀光夜市</h2>
+                <p>台灣地方美食,享受傳統美食風味,讓您品嚐北中南的特色料理
+                    <p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="image/dumpling.jpg" width="500px" alt="小籠包">
+            <div class="item-text">
+                <h2>鼎泰豐小籠包</h2>
+                <p>台灣聞名國際的鼎泰豐小籠包,深受國際觀光客的愛戴與支持
+                    <p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="image/chinese-temple.jpg" width="500px" alt="寺廟">
+            <div class="item-text">
+                <h2>傳統寺廟</h2>
+                <p>台灣地方特色廟宇,讓您感受歷史建築特色並感受宗教心靈慰藉
+                    <p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="image/taipei.jpg" width="500px" alt="台北">
+            <div class="item-text">
+                <h2>自由廣場</h2>
+                <p>台北自由廣場,是觀光客打卡拍照的絕佳景點之一
+                    <p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 人員或特色介紹卡片 -->
+    <div class="feature">
+        <div class="info">
+            <img src="image/taiwanese-cuisine.jpg" alt="滷肉飯">
+            <div class="info-text">
+                <h2>滷肉飯</h2>
+                <p>滷肉飯是臺灣流行的一道豬肉丁飯菜餚。滷肉飯的特色和製作的關鍵部分在於肉醬和肉汁,在台南、台中、台北的製作方法和特點均有差異。「滷肉飯」大多是使用滷五花肉塊,而「魯肉飯」或「肉燥飯」才大多是使用滷肉碎。趕快來吃吃看吧!</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <img src="image/sausage.jpg" alt="大腸包小腸">
+            <div class="info-text">
+                <h2>大腸包小腸</h2>
+                <p>大腸包小腸是台灣一種小吃,俗稱台式熱狗,發源於台灣花蓮的客家人出門工作時的點心,於九十年代開始在台灣夜市流行,並在現在成為台灣普遍的美食。在許多景點常有小攤販與客人以骰子對賭,故有句俗諺曰「黑無腸,白無腸,大腸包小腸」。趕快來吃吃看吧!</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <img src="image/taiwanese-snacks.jpg" alt="爌肉飯">
+            <div class="info-text">
+                <h2>爌肉飯</h2>
+                <p>爌肉飯是一種以白飯佐以燉煮豬肉的米食。配菜則以醃菜類及筍絲為主,飯內或灑肉燥。所謂的控肉是指將大塊豬五花肉以醬油、糖及香料等材料,用小火煮至熟軟滷製而成的肉,其他部位的豬肉塊則有其他名稱。喜歡控肉飯的朋友們趕快來吃吃看吧!</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

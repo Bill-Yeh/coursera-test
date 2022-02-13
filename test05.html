@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <style>
+        h1 {
+            color: blue;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 20px 0px 0px 15px;
+        }
+        
+        .container {
+            width: 960px;
+            display: flex;
+            margin: auto;
+            margin-top: 30px;
+        }
+        
+        .item {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid rgb(153, 153, 153);
+            text-align: center;
+            line-height: 25px;
+            position: relative;
+        }
+        
+        .item ul {
+            list-style-type: disc;
+            text-align: left;
+            padding-top: 10px;
+            padding-left: 15px;
+        }
+        
+        .item .tab {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            padding: 6px 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .ad {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(48, 44, 255);
+            border: 1px groove rgb(175, 175, 175);
+            margin: auto;
+            position: relative;
+            padding: 15px 10px;
+        }
+        
+        .ad h3 {
+            font-size: 25px;
+            text-align: center;
+            color: white;
+            margin-top: 5px;
+        }
+        
+        .ad p {
+            margin: 10px;
+            line-height: 1.8;
+            color: white;
+        }
+        
+        .ad .close {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .ad .close:hover {
+            background-color: red;
+        }
+        
+        .ad img {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><img src="image/asus.jpg" alt="asus"></h1>
+
+    <div class="container">
+        <div class="item">
+            <div class="tab">HOT</div>
+            <img src="https://dlcdnwebimgs.asus.com/gain/c05b6491-6d2b-48f0-81f0-d268840208d6/w185/fwebp" alt="zenfone 8">
+            <h2>Zenfone 8</h2>
+            <ul>
+                <li>單手剛好(5.9 吋輕巧機身)</li>
+                <li>效能更好(高通 S888 5G 處理器)</li>
+                <li>電力超強(4000mAh 超大電量)</li>
+
+            </ul>
+
+        </div>
+        <div class="item">
+            <div class="tab">HOT</div>
+            <img src="https://dlcdnwebimgs.asus.com/gain/8e5b05f8-0719-4812-b98c-a39def111d81/w185/fwebp" alt="zenfone 8 flip">
+            <h2>Zenfone 8 flip</h2>
+            <ul>
+                <li>翻轉視野( 180度翻轉三鏡頭)</li>
+                <li>旗艦高效(高通S888 5G處理器)</li>
+                <li>真全螢幕(螢幕下指紋辨識)</li>
+                <li>長效續航(5000mAh超大電量)</li>
+
+            </ul>
+        </div>
+        <div class="item">
+            <div class="tab">HOT</div>
+            <img src="https://dlcdnwebimgs.asus.com/gain/d8b02b85-bb81-45fc-90f2-083910edd33d/w185/fwebp" alt="zenfone 7">
+            <h2>Zenfone 7</h2>
+            <ul>
+                <li>180度翻轉三鏡頭</li>
+                <li>高通S865 5G處理器</li>
+                <li>6.67吋 AMOLED 全螢幕</li>
+                <li>5000mAh超大電量</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="ad">
+        <div class="close">關閉</div>
+        <h3>彈出式廣告</h3>
+        <p>ZenFone 是一款優異的智慧型手機，結合風格獨特的設計與最新的高階組件及軟體，您可以使用這款真正與眾不同的手機拍攝超高畫質的照片，或是在外出時享受最新的手機遊戲等。</p>
+        <img src="https://www.asus.com/media/Odin/Websites/global/ProductLine/20201007042713/P_setting_xxx_0_90_end_80.png?webp" width="120px" alt="zenfone">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .header {
+            height: 70px;
+            background-color: rgb(0, 0, 0);
+            position: relative;
+        }
+        
+        .logo {
+            width: 70px;
+            height: 50px;
+            padding: 10px 10px;
+        }
+        
+        #menu_control {
+            position: absolute;
+        }
+        
+        .menu_btn {
+            width: 40px;
+            height: 40px;
+            background-color: grey;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .menu_btn span {
+            opacity: 0;
+        }
+        
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 2px;
+            top: 0px;
+            bottom: 0px;
+            left: 2px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0px 8px white, 0px -8px white;
+        }
+        
+        nav {
+            width: 70%;
+            height: 60vh;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            top: 60px;
+            left: -100%;
+            transition: 0.5s;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: rgb(134, 207, 255);
+            padding: 15px 20px;
+            border-bottom: 1px solid rgb(134, 207, 255);
+        }
+        
+        nav a:hover {
+            color: rgb(255, 242, 169);
+        }
+        
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+        
+        .banner img {
+            width: 100%;
+        }
+        
+        .wrap {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .item {
+            margin: 0px 10px 20px;
+            width: 100%;
+        }
+        
+        .item img {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .title {
+            margin: 30px 0px 10px;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        
+        .title p {
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .item h3 {
+            text-align: center;
+            font-size: 25px;
+        }
+        
+        .footer {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px 0px;
+        }
+        
+        .ad {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(128, 128, 128, 0.699);
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ad .text {
+            width: 90%;
+            height: 200px;
+            max-width: 300px;
+            background-color: white;
+            padding: 10px;
+            position: relative;
+        }
+        
+        .ad .text h2 {
+            text-align: center;
+            font-size: 20px;
+            margin: 10px;
+        }
+        
+        .ad .text p {
+            line-height: 1.5;
+        }
+        
+        .ad .text .ad-close img {
+            position: absolute;
+            top: -7px;
+            right: -7px;
+        }
+        
+        @media screen and (min-width:768px) {
+            .menu_btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent
+            }
+            nav a {
+                border-bottom: none;
+            }
+            nav a:hover {
+                color: rgb(255, 242, 169);
+                transform: scale(1.1);
+            }
+            .banner img {
+                height: 700px;
+            }
+            .item-group {
+                display: flex;
+                width: 100%;
+                margin: auto;
+            }
+            .title {
+                margin: 40px 0px 10px;
+            }
+            .title h2 {
+                text-align: left;
+            }
+            .title h3 {
+                text-align: left;
+            }
+            .title p {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="Globe-logo-award.png" height="50px" alt="logo"></a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">最新消息</a>
+            <a href="#">新品上市</a>
+            <a href="#">聯名款式</a>
+            <a href="#">促銷專區</a>
+            <a href="#">關於我們</a>
+            <a href="#">聯絡資訊</a>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="model.jpg" alt="時尚">
+    </div>
+
+
+    <div class="new">
+        <div class="wrap">
+            <div class="title">
+                <h2>2022春夏新品</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates reiciendis sapiente beatae quod at sed vero! Illo, eveniet neque, fugit pariatur numquam ullam optio magni itaque dolorum, facere delectus.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <img src="shoes.jpg" alt="男鞋">
+                    <h3>title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos in ipsum praesentium saepe natus, provident labore recusandae molestias fugit facilis dolorem reiciendis exercitationem quod. Id reprehenderit excepturi exercitationemexpedita
+                        beatae.
+                    </p>
+                </div>
+                <div class="item">
+                    <img src="shoes.jpg" alt="男鞋">
+                    <h3>title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos in ipsum praesentium saepe natus, provident labore recusandae molestias fugit facilis dolorem reiciendis exercitationem quod. Id reprehenderit excepturi exercitationem
+                        expedita beatae.</p>
+                </div>
+                <div class="item">
+                    <img src="shoes.jpg" alt="男鞋">
+                    <h3>title</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos in ipsum praesentium saepe natus, provident labore recusandae molestias fugit facilis dolorems reiciendis exercitationem quod. Id reprehenderit excepturi exercitationemexpedita
+                        beatae.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="denim">
+        <div class="wrap">
+            <div class="title">
+                <h2>氣質丹寧系列</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates reiciendis sapiente beatae quod at sed vero! Illo, eveniet neque, fugit pariatur numquam ullam optio magni itaque dolorum, facere delectus.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <img src="denim.jpg" alt="質感丹寧系列">
+                    <h3>title</h3>
+                </div>
+                <div class="item">
+                    <img src="denim.jpg" alt="質感丹寧系列">
+                    <h3>title</h3>
+                </div>
+                <div class="item">
+                    <img src="denim.jpg" alt="質感丹寧系列">
+                    <h3>title</h3>
+                </div>
+                <div class="item">
+                    <img src="denim.jpg" alt="質感丹寧系列">
+                    <h3>title</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jacket">
+        <div class="wrap">
+            <div class="title">
+                <h2>休閒夾克系列</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates reiciendis sapiente beatae quod at sed vero! Illo, eveniet neque, fugit pariatur numquam ullam optio magni itaque dolorum, facere delectus.</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <img src="jacket.jpg" alt="休閒夾克">
+                    <h3>title</h3>
+
+                </div>
+                <div class="item">
+                    <img src="jacket.jpg" alt="休閒夾克">
+                    <h3>title</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad">
+        <div class="text">
+            <h2>限時特價</h2>
+            <p> ipsum dolor sit amet consectetur adipisicing elit. Inventore, nemo, impedit debitis magni, maiores voluptas ex ipsum voluptatibus minus rerum ad beatae dicta esse quibusdam harum deleniti quo! Iusto, a.</p>
+            <a href="#" class="ad-close"><img src="cancel.png" width="30px" alt="close"></a>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        &copy; copyright 2022 by Bill
+    </div>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script text="text/javascript">
+        $(document).ready(function() {
+            $(".ad-close").click(function() {
+                $(".ad").hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

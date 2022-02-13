@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁頁尾版塊</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+    <style>
+        .main-footer {
+            width: 100%;
+            padding: 80px 0 0;
+            background-color: rgb(202, 202, 202);
+        }
+        
+        .main-footer .container {
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+        
+        .footer-item {
+            width: 0;
+            flex-grow: 1;
+            margin: 0px 20px;
+        }
+        
+        .footer-item h4 {
+            font-size: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+            padding-bottom: 5px;
+        }
+        
+        .footer-item nav {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+            align-items: flex-start;
+        }
+        
+        .footer-item nav a {
+            text-decoration: none;
+            padding: 5px 0 5px;
+            color: black;
+        }
+        
+        .footer-item nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-subs {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-subs form {
+            width: 100%;
+            display: flex;
+            margin: auto 0;
+        }
+        
+        .footer-subs input[type="text"],
+        .footer-subs input[type="submit"] {
+            border: none;
+            padding: 5px 10px;
+        }
+        
+        .footer-subs input[type="text"] {
+            /* 使其滿版 */
+            width: 0;
+            flex-grow: 1;
+        }
+        
+        .footer-subs input[type="submit"] {
+            background-color: black;
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin: 100px 0;
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 網頁頁尾版塊 -->
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+                <h4>關於我們</h4>
+                <nav>
+                    <a href="#">品牌概念</a>
+                    <a href="#">企業組成</a>
+                    <a href="#">投資者關係</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>服務項目</h4>
+                <nav>
+                    <a href="#">男裝</a>
+                    <a href="#">女裝</a>
+                    <a href="#">童裝</a>
+                    <a href="#">聯名系列</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>協助</h4>
+                <nav>
+                    <a href="#">客戶服務</a>
+                    <a href="#">我的帳戶</a>
+                    <a href="#">尋找門市</a>
+                    <a href="#">聯絡方式</a>
+                </nav>
+            </div>
+            <div class="footer-item footer-subs">
+                <h4>訂閱電子報</h4>
+                <form>
+                    <input type="e,ail" placeholder="電子郵件">
+                    <input type="submit" value="訂閱">
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2022 Bill-Yeh
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
