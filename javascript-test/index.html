@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .info1 {
+            padding: 15px 0;
+        }
+        
+        .info2 {
+            padding: 15px 0;
+        }
+        
+        .info3 {
+            padding: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hello world</p>
+    <div class="container">
+        <div class="item">
+            <!-- 年齡輸入 -->
+            <div class="info1">
+                <label for="age">請輸入年齡</label>
+                <input type="text" id="age">
+                <button onclick="IsValidAge()">送出</button>
+            </div>
+            <!-- 匯率轉換 -->
+            <div class="info2">
+                <label for="USD">美金:</label>
+                <input type="text" id="USD">
+                <button onclick="Convet2TWD()">轉換</button>
+                <label for="TWD">新台幣:</label>
+                <input type="text" id="TWD" readonly>
+            </div>
+            <div class="info3">
+                <label for="selectDate">請選擇日期</label>
+                <input type="date" name="" id="selectDate">
+                <button onclick="Holiday()">檢查</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 製作日期表單 -->
+
+
+    <!-- <script>
+        // 年齡輸入
+        function IsValidAge() {
+            var age = parseInt(document.getElementById('age').value);
+            if (isNaN(age)) {
+                alert('年齡必須是數值')
+            } else {
+                alert(age);
+            }
+        }
+
+        // 匯率轉換
+        function Convet2TWD() {
+            var usd = parseInt(document.getElementById('USD').value)
+            if (isNaN(usd)) {
+                alert('美金必須是數值');
+            } else {
+                document.getElementById('TWD').value = (usd * 28.5).toFixed(2);
+            }
+        }
+    </script> -->
+
+
+    <script src="index07.js"></script>
+</body>
+
+</html>
